@@ -36,7 +36,7 @@ function tambah($data)
   VALUES
   (null,'$nama','$nrp','$email','$jurusan','$gambar');
   ";
-  mysqli_query($conn, $query);
+  mysqli_query($conn, $query) or die(mysqli_error($conn));
   echo mysqli_error($conn);
   return mysqli_affected_rows($conn);
 }
